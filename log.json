@@ -1,0 +1,124 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://commonspace.tnl.gs/"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Welcome To CommonSpace"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Sign In"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "txtuser"
+      },
+      "text": "emanuel.pereyra@fdvsolutions.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "password"
+      },
+      "text": "Emanuel1"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "login_btn"
+      }
+    },
+    {
+      "type": "verifyCurrentUrl",
+      "url": "https://commonspace.tnl.gs/stream"
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Welcome!"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Welcome!"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "i.fa.fa-chevron-down"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Portfolio"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "My Portfolio"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Emanuel Pereyra"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Portfolio"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "li.. > a"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='outer_container']//a[.='Profile']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Public Projects"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "top_menu_dropdown"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Sign Out"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
